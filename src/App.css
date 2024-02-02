@@ -1,0 +1,113 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #121212; /* Dark background color */
+  color: #ffffff; /* Text color */
+  width:100%
+}
+
+.video-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  width: 100%; 
+  height: 50%;
+  margin-left: 10%;
+  margin-right:10%;
+}
+
+.video-container video {
+   /* Adjust the width as needed */
+  border: 2px solid #ffffff; /* White border around videos */
+  margin: auto;
+  height:80%
+}
+
+.controls-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  width: 100%;
+}
+
+button {
+  padding: 10px;
+  background-color: #4CAF50; /* Green color for regular buttons */
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s; 
+  margin-top: 2%;
+}
+
+button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+.close-call-btn {
+  background-color: #ff4040; /* Red color for close call button */
+}
+
+.call-ended {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #121212; /* Dark background color */
+  color: #ffffff; /* Text color */
+}
+
+input {
+  padding: 10px;
+  margin-top: 10px;
+  width: 300px;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  background-color: #333333; /* Darker background for input */
+  color: #ffffff;
+}
+
+input::placeholder {
+  color: #aaaaaa; /* Placeholder text color */
+}
+
+@media (max-width: 600px) {
+  .video-container {
+    flex-direction: column; /* Adjust layout for mobile screens */
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .video-container video {
+    width: 100%; /* Full width for mobile screens */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .controls-container {
+    flex-direction: row; /* Adjust layout for mobile screens */
+    align-items: center; /* Center controls horizontally */
+    position: fixed; /* Fix controls to the bottom */
+    bottom: 0;
+    width: 10%;
+    background-color: #121212; 
+    margin: auto; 
+  }
+  .mute-button{
+    margin:auto
+  }
+  .vedio-button{
+    margin:auto;
+  }
+  .close-call-btn{
+    margin:auto;
+  }
+
+  input {
+    width: 50%; /* Full width for mobile screens */
+  }
+}
